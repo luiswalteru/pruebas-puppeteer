@@ -19,7 +19,7 @@ const Replacements = require("./Replacements");
 // const DATA_REPORT = require("./Mockup_JSON_API_v3_SUBPERIODS");
 
 // const DATA_REPORT = require("./TAN-6247___1");
-const DATA_REPORT = require("./TAN-6247___con_logos");
+const DATA_REPORT = require("./mockup/TAN-6247___con_logos");
 
 async function generatePDF() {
   try {
