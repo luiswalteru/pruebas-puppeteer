@@ -1,0 +1,346 @@
+@charset "UTF-8";
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.report-draft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 1px solid #ebe0d7;
+  background: #fff;
+  box-shadow: 0 6px 8px 0 rgba(44, 44, 44, 0.1);
+  box-sizing: border-box;
+  padding: 38px 24px 24px 24px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.report-draft-page {
+  display: flex;
+  width: 100%;
+  min-height: 100vh; /* Altura mínima completa de la página */
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+}
+.report-draft-page.report-font-size-12 {
+  font-size: 12px !important;
+}
+.report-draft-page.report-font-size-12 * {
+  font-size: 12px !important;
+}
+.report-draft-page.report-font-size-14 {
+  font-size: 14px !important;
+}
+.report-draft-page.report-font-size-14 * {
+  font-size: 14px !important;
+}
+.report-draft-page.report-font-size-16 {
+  font-size: 16px !important;
+}
+.report-draft-page.report-font-size-16 * {
+  font-size: 16px !important;
+}
+.report-draft-page-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 42px;
+}
+.report-draft-page-header-logo {
+  width: 108px;
+  height: 108px;
+}
+.report-draft-page-header-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+.report-draft-page-header-data {
+  min-height: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.report-draft-page-header-data-column {
+  width: 50%;
+  min-height: 70px;
+  display: inline-flex;
+  padding: 8px 16px 0 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.report-draft-page-header-data-column > div {
+  color: #4e4e4e;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  width: 100%;
+  min-height: 23px;
+}
+.report-draft-page-header-data-column-schoolname, .report-draft-page-header-data-column-student {
+  text-align: left;
+}
+.report-draft-page-header-data-column-etapa, .report-draft-page-header-data-column-date {
+  text-align: right;
+}
+.report-draft-page-content {
+  box-sizing: border-box;
+  padding: 0;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.report-draft-page-content img {
+  width: 100%;
+  height: auto;
+}
+.report-draft-page-content .report-draft-page-header .report-draft-page-header-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+.report-draft-page {
+  /* Espaciador flexible para empujar el footer hacia abajo */
+}
+.report-draft-page-spacer {
+  flex: 1 1 auto;
+  min-height: 50px;
+}
+.report-draft-page {
+  /* Footer pegado al fondo */
+}
+.report-draft-page-signatures {
+  width: 100%;
+  height: 147px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+.report-draft-page-signatures-right, .report-draft-page-signatures-left {
+  width: 280px;
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 8px;
+  position: relative;
+}
+.report-draft-page-signatures-right img, .report-draft-page-signatures-left img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  object-position: bottom;
+}
+.report-draft-page-signatures-border {
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #767676;
+  margin-top: 8px;
+}
+.report-draft-page-labels {
+  width: 100%;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.report-draft-page-labels-left, .report-draft-page-labels-right {
+  text-align: center;
+  width: 280px;
+  height: 100%;
+  color: #4e4e4e;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.report-draft-page-address {
+  display: flex;
+  padding: 8px 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+.report-draft-page-address-column {
+  color: #4e4e4e;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.report-draft-page-certifications {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.report-draft-page-certifications img {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: calc(50% - 8px);
+  height: 100px;
+  object-fit: contain;
+  object-position: bottom;
+}
+.report-draft-page-table-container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px 0 0 0;
+}
+.report-draft-page-table-empty {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4e4e4e;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  height: 164px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+.report-draft-page-table-classinfo {
+  width: 100%;
+  display: flex;
+  height: 33px;
+  padding: 0 14px;
+  align-items: center;
+  gap: 10px;
+  background: #e0e0e0;
+  margin: 8px 0;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.report-draft-page-table-classinfo > div {
+  color: #333;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.report-draft-page-table-main {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #767676;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+.report-draft-page-table-main th {
+  border: 1px solid #767676;
+  background-color: #f2f2f2;
+  color: #4e4e4e;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 16px;
+  text-align: center;
+}
+.report-draft-page-table-main td {
+  border: 1px solid #767676;
+  padding: 9px 16px;
+  color: #4e4e4e;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.report-draft-page-table-main td.subject-period-cell {
+  text-align: center;
+}
+.report-draft-page-table-main td.grade-cell {
+  text-align: center;
+}
+
+/* Saltos de página para múltiples estudiantes */
+.page-break {
+  page-break-after: always;
+  break-after: page;
+}
+
+/* Reglas específicas para medios impresos */
+@media print {
+  .report-draft-page {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    page-break-inside: avoid !important;
+  }
+  .report-draft-page-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    flex: 0 0 auto !important; /* No expandir el contenido */
+  }
+  .report-draft-page-spacer {
+    flex: 1 1 auto !important; /* Tomar todo el espacio disponible */
+    min-height: 50px !important; /* Espacio mínimo */
+  }
+  /* Grupo del footer que incluye firmas y certificaciones */
+  .report-draft-page-signatures,
+  .report-draft-page-labels,
+  .report-draft-page-address,
+  .report-draft-page-certifications {
+    page-break-inside: avoid !important;
+    flex-shrink: 0 !important; /* No comprimir el footer */
+  }
+  /* Footer completo pegado al fondo */
+  .report-draft-page-signatures {
+    margin-top: auto !important; /* Empujar hacia abajo */
+  }
+  .report-draft-page-certifications {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 16px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .page-break {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+}

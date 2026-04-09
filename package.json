@@ -1,0 +1,25 @@
+{
+  "name": "puppeteer-pdf-generator",
+  "version": "1.0.0",
+  "description": "Aplicación Node.js simple para generar PDFs con Puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "puppeteer",
+    "pdf",
+    "nodejs",
+    "html-to-pdf"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^24.18.0",
+    "sass": "^1.93.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

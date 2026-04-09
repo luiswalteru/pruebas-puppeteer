@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento PDF - Generado con Puppeteer</title>
+    <style>
+        {{styles}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Documento Ejemplo</h1>
+            <p class="subtitle">Generado con Node.js y Puppeteer</p>
+            <div class="date">Fecha: <span id="current-date"></span></div>
+        </header>
+
+        <main class="content">
+            <section class="section">
+                <h2>Información General</h2>
+                <p>Este es un documento PDF generado automáticamente usando:</p>
+                <ul class="tech-list">
+                    <li><strong>Node.js</strong> - Entorno de ejecución</li>
+                    <li><strong>Puppeteer</strong> - Librería para generar PDF</li>
+                    <li><strong>HTML</strong> - Template del documento</li>
+                    <li><strong>CSS</strong> - Estilos del documento</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Características</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <h3>🚀 Rápido</h3>
+                        <p>Generación eficiente de PDFs</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🎨 Personalizable</h3>
+                        <p>Estilos CSS totalmente modificables</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📱 Responsive</h3>
+                        <p>Adaptable a diferentes tamaños</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Datos de Ejemplo</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Descripción</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Producto A</td>
+                            <td>Descripción del producto A</td>
+                            <td>$100.00</td>
+                        </tr>
+                        <tr>
+                            <td>Producto B</td>
+                            <td>Descripción del producto B</td>
+                            <td>$250.00</td>
+                        </tr>
+                        <tr>
+                            <td>Servicio C</td>
+                            <td>Descripción del servicio C</td>
+                            <td>$75.00</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="2"><strong>Total</strong></td>
+                            <td><strong>$425.00</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 - Documento generado automáticamente</p>
+            <p class="tech-info">Powered by Node.js + Puppeteer</p>
+        </footer>
+    </div>
+
+    <script>
+        // Agregar la fecha actual
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('es-ES');
+    </script>
+</body>
+</html>
