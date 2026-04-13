@@ -123,7 +123,7 @@ function Replacements(template, data, cssStyles, index, student) {
   ){
     template = template.replace("{{SIGNATURES_CONTAINER}}", "");
   }else{    
-    template = template.replace("{{SIGNATURES_CONTAINER}}", "<div class='report-draft-page-spacer'></div>   <div class='report-draft-page-signatures'>{{SIGNATURE_LEFT}}{{SIGNATURE_RIGHT}}</div>");
+    template = template.replace("{{SIGNATURES_CONTAINER}}", "<div class='report-draft-page-signatures'>{{SIGNATURE_LEFT}}{{SIGNATURE_RIGHT}}</div>");
   }
 
   const signatureLeft = `<div class="report-draft-page-signatures-left">${addSignatureImage(

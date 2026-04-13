@@ -11,7 +11,7 @@ function DocumentTODO() {
     <body>
       <div class="report-draft-page report-font-size-{{FONT_SIZE}} page-break">
         <div class="report-draft-page-content">
-    
+
             <div class="report-draft-page-header">
                 {{SCHOOL_LOGO}}
                 <div class="report-draft-page-header-data">
@@ -29,29 +29,27 @@ function DocumentTODO() {
                     </div>
                 </div>
             </div>
-    
+
             <div class="report-draft-page-table-container">
                 {{CLASS_CONTAINER}}
                 {{TABLE}}
             </div>
-            <!-- Espaciador flexible para empujar el footer hacia abajo -->
-            
-    
-            {{SIGNATURES_CONTAINER}}  
-                
+
+        </div> <!-- Cierre de report-draft-page-content -->
+
+        <div class="report-draft-page-footer">
+            {{SIGNATURES_CONTAINER}}
+
             {{SIGNATURE_TITLES}}
 
             {{SIGNATURE_NAMES}}
 
             {{SCHOOL_ADDRESS}}
 
-            </div>
-    
             {{CERTIFICATIONS_IMAGES}}
-        </div> <!-- Cierre de report-draft-page-content -->
-        
-    
         </div>
+
+        </div> <!-- Cierre de report-draft-page -->
       </body>
     </html>`);
 }

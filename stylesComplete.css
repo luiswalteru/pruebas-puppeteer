@@ -137,13 +137,19 @@ body {
 .report-draft-page {
   /* Footer pegado al fondo */
 }
+.report-draft-page-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: auto; /* Empuja el footer al fondo cuando hay espacio */
+}
 .report-draft-page-signatures {
   width: 100%;
   height: 147px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: auto;
 }
 .report-draft-page-signatures-right, .report-draft-page-signatures-left {
   width: 280px;
@@ -317,17 +323,13 @@ body {
     flex: 1 1 auto !important; /* Tomar todo el espacio disponible */
     min-height: 50px !important; /* Espacio mínimo */
   }
-  /* Grupo del footer que incluye firmas y certificaciones */
-  .report-draft-page-signatures,
-  .report-draft-page-labels,
-  .report-draft-page-address,
-  .report-draft-page-certifications {
+  /* Footer agrupado: firmas + labels + address + certifications
+     Se mantiene unido y salta completo a la siguiente página si no cabe */
+  .report-draft-page-footer {
     page-break-inside: avoid !important;
-    flex-shrink: 0 !important; /* No comprimir el footer */
-  }
-  /* Footer completo pegado al fondo */
-  .report-draft-page-signatures {
-    margin-top: auto !important; /* Empujar hacia abajo */
+    break-inside: avoid !important;
+    flex-shrink: 0 !important;
+    margin-top: auto !important; /* Pegado al fondo cuando hay espacio */
   }
   .report-draft-page-certifications {
     display: flex !important;
